@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+app	test/bootstrap/functional.php	/^  $app = 'frontend';$/;"	v
+configuration	test/bootstrap/functional.php	/^$configuration = ProjectConfiguration::getApplicationConfiguration($app, 'test', isset($debug) ? $debug : true);$/;"	v
+configuration	test/bootstrap/unit.php	/^$configuration = new sfProjectConfiguration(dirname(__FILE__).'\/..\/fixtures\/project');$/;"	v
+h	test/bin/prove.php	/^$h = new lime_harness(new lime_output_color());$/;"	v
+initialize	config/sfEasyMarkdownPluginConfiguration.class.php	/^  public function initialize()$/;"	f
+plugin_configuration	test/bootstrap/unit.php	/^$plugin_configuration = new sfEasyMarkdownPluginConfiguration($configuration, dirname(__FILE__).'\/..\/..');$/;"	v
+sfEasyMarkdownPluginConfiguration	config/sfEasyMarkdownPluginConfiguration.class.php	/^class sfEasyMarkdownPluginConfiguration extends sfPluginConfiguration$/;"	c
+sfEasyMarkdownPlugin_cleanup	test/bootstrap/functional.php	/^function sfEasyMarkdownPlugin_cleanup()$/;"	f
