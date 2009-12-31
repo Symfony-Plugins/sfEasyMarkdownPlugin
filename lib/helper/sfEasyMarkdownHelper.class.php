@@ -27,6 +27,9 @@ class sfEasyMarkdownHelper
   {
     $filters = self::addBuiltinFilters($filters);
 
+    // xml special chars
+    $content = str_replace(array('&', '<', '>'), array('&amp;', '&lt;', '&gt;'), $content);
+
     $html = self::render_raw($content);
 
     foreach ($filters as $filterCallable)
