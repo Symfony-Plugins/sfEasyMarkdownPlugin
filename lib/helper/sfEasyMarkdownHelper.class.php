@@ -28,7 +28,7 @@ class sfEasyMarkdownHelper
     $filters = self::addBuiltinFilters($filters);
 
     // xml special chars
-    $content = str_replace(array('&', '<', '>'), array('&amp;', '&lt;', '&gt;'), $content);
+    $content = str_replace(array('<', '>'), array('&lt;', '&gt;'), $content);
 
     $html = self::render_raw($content);
 
@@ -87,7 +87,7 @@ class sfEasyMarkdownHelper
     if (preg_match('/^\[(.+?)\]\s*(.+)$/s', $matches[1], $match))
     {
       $language = ($match[1] == 'xml') ? 'html4strict' : $match[1];
-      return sfEasySyntaxHighlighterHelper::render(html_entity_decode($match[2]), $language);
+      return sfEasySyntaxHighlighterHelper::render(html_entity_decode(html_entity_decode($match[2])), $language);
     }
     else
     {
